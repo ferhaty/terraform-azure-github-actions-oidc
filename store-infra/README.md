@@ -14,7 +14,7 @@ The workflow files in this nested sample directory are inert in the public compa
 
 Use existing subscriptions and an existing common Entra tenant (the tutorial's proposed default), administrator-approved Azure CLI access for bootstrap, and globally unique state storage/namespace names. The administrator preregisters Microsoft.Storage, Microsoft.ManagedIdentity and Microsoft.ServiceBus. Replace every placeholder; the example values do not identify provisioned resources.
 
-Set each GitHub environment's AZURE_CLIENT_ID, AZURE_TENANT_ID and AZURE_SUBSCRIPTION_ID from that environment's bootstrap outputs. Check the exact GitHub immutable repository/environment subject. Stage and Production must require approval before both plan and apply; Dev has no reviewer gate. Required environment reviewers for a private repository need an eligible GitHub plan.
+Create AZURE_CLIENT_ID, AZURE_TENANT_ID and AZURE_SUBSCRIPTION_ID as GitHub environment secrets from that environment's bootstrap outputs, under Settings → Environments → Environment secrets. Check the exact GitHub immutable repository/environment subject. Stage and Production must require approval before both plan and apply; Dev has no reviewer gate. Required environment reviewers for a private repository need an eligible GitHub plan.
 
 Workload Contributor is scoped to the dedicated workload resource group; state Blob Data Contributor is scoped separately to its container. The same deployment-capable identity is used by plan and apply. No client secret, account key or SAS token is used.
 

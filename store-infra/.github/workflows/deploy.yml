@@ -1,0 +1,24 @@
+name: Terraform Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  dev:
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/environment.yml
+    with:
+      environment: dev
+  stage:
+    needs: dev
+    uses: ./.github/workflows/environment.yml
+    with:
+      environment: stage
+  production:
+    needs: stage
+    uses: ./.github/workflows/environment.yml
+    with:
+      environment: production

@@ -1,6 +1,6 @@
-# store-infra — Azure Terraform review example
+# store-infra — Azure Terraform example
 
-Companion code for **Deploying Terraform to Azure with GitHub Actions and OIDC**, currently an unpublished draft.
+Companion code for **Deploying Terraform to Azure with GitHub Actions and OIDC**. Visit the [Turing blog](https://blog.turingts.com/).
 
 The workflow files in this nested sample directory are inert in the public companion repository. Read the [repository README](../README.md) before copying the sample into your own separately configured private repository. Run the commands below from this `store-infra` directory. Local mock validation does not demonstrate a live Azure deployment.
 
@@ -33,4 +33,4 @@ terraform -chdir=terraform test
 
 Every test file uses `mock_provider "azurerm"`. Bootstrap tests are kept in separate files so each subscription fixture gets independent mock state; their mocked apply operations do not create Azure resources. The workflow uses the real backend, not backend-disabled init.
 
-The companion article is still a draft. Before any real administrator setup or promotion, review the repository prerequisites and configure your own private repository. Review saved plans before applying. Do not run untrusted PR code with these identities, automatically apply stale plans, or put state/plans in Git.
+Before any real administrator setup or promotion, review the repository prerequisites and configure your own private repository. Review saved plans before applying. Do not run untrusted PR code with these identities, automatically apply stale plans, or put state/plans in Git.

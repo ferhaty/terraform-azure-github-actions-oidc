@@ -1,6 +1,6 @@
 # store-infra — Azure Terraform example
 
-Companion code for **Deploying Terraform to Azure with GitHub Actions and OIDC**. Visit the [Turing blog](https://blog.turingts.com/).
+Companion code for **Deploying Terraform to Azure with GitHub Actions and OIDC**. Visit the [Turing Technology Services blog](https://blog.turingts.com/).
 
 The workflow files in this nested sample directory are inert in the public companion repository. Read the [repository README](../README.md) before copying the sample into your own separately configured private repository. Run the commands below from this `store-infra` directory. Local mock validation does not demonstrate a live Azure deployment.
 

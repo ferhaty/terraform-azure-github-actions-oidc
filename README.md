@@ -1,6 +1,6 @@
 # Terraform on Azure with GitHub Actions and OIDC
 
-Companion examples for **Deploying Terraform to Azure with GitHub Actions and OIDC** by Turing Technology Services. Visit the [Turing blog](https://blog.turingts.com/).
+Companion examples for **Deploying Terraform to Azure with GitHub Actions and OIDC** by Turing Technology Services. Visit the [Turing Technology Services blog](https://blog.turingts.com/).
 
 ## Safe example layout
 
